@@ -10,20 +10,20 @@ Esta foi minha primeira competição no Kaggle, então o código não está 100%
 
 * `base.py`: imports e algumas funções gerais
 * `hyperopt_search_spaces.py`: definição de espaços de busca para otimização de hiperparâmetros
-* `titanic-explore.py`: gráficos e dados sobre o conjunto de dados
+* `titanic-explore.py`: gráficos e informações sobre o conjunto de dados
 * `titanic-feat-eng.py`: criação de novas variáveis (*feature engineering*)
 * `titanic-train.py`: ajuste de algoritmos, otimização de hiperparâmetros
 * `titanic.r`: ajuste do algoritmo *conditional inference trees*, melhor solução que obtive
    
 ### Descrição
 
-Este desafio é como um "Hello World" no mundo dos Kagglers, onde muita gente começa com a ciência de dados. O dataset é pequeno e fácil de lidar.
+Este desafio é como um "Hello World" no mundo dos Kagglers, onde muitos têm seu primeiro contato com a ciência de dados. O dataset é pequeno e fácil de lidar.
 
 Meu foco foi na criação de novas variáveis (mais na próxima seção) e na otimização de hiperparâmetros (usando o pacote [hyperopt](https://github.com/hyperopt/hyperopt)). 
 
 Infelizmente não foi possível obter uma CV robusta. Os resultados na validação (utilzando diversas estratégias mudando o número de folds e repetições) se mostraram muito diferentes do que na leaderboard, provavelmente em razão da pequena quantidade de exemplos de teste e treino.
 
-No final utilizei uma floresta de conditional inference trees com as novas variáveis que extraí, uma estratégia utilizada por diversos outros competidores. 
+No final utilizei uma floresta de *conditional inference trees* com as novas variáveis que extraí, uma estratégia utilizada por diversos outros competidores. 
 
 O resultado final foi uma acurácia de 0.80861, que ficaria entre o top 10%~25% da competição (a LB se atualiza com tempo, então não é possível dizer com certeza).
 
@@ -73,7 +73,7 @@ Novamente, pessoas com maior poder aquisitivo tinham melhores chances de sobrevi
 
 #### Sobrevivência vs. Título e Idade
 
-Mostrando novamente a tendência de mulheres sobreviverem mais que homens. O título "Master" em particular é dado para crianças, e por isso mostra maior número de sobreviventes.
+Mostrando novamente a tendência de mulheres sobreviverem mais que homens. O título "Master" em particular é dado para crianças, e por isso mostra maior número de sobreviventes que os outros associados ao sexo masculino.
 
 ![](https://github.com/gdmarmerola/titanic-ml/blob/master/plots/age-title.png)
 
